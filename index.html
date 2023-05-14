@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS from A code */
+    /* Add your CSS styles here */
+    body {
+			background-color: #f1f1f1;
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			color: #275e29;
+			text-align: center;
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+		table {
+			border-collapse: collapse;
+			width: 80%;
+			margin: auto;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+			background-color: #fff;
+			border-radius: 5px;
+			overflow: hidden;
+		}
+		th, td {
+			text-align: left;
+			padding: 12px;
+			border-bottom: 1px solid #ddd;
+		}
+		th {
+			background-color: #166917;
+			color: white;
+			font-weight: normal;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+        #searchInput {
+            margin: auto;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1.125rem;
+            width: 50%;
+        }
+</style>
+    
+ 
+</head>
+<body>
+    <h1>
+    <input type="text" id="searchInput" placeholder="Search by subject name">
+    </h1>
+    <script type="application/javascript">
+            /* JavaScript from A code */
+    // Add your JavaScript code here
+    document.addEventListener("DOMContentLoaded", function() {
+      // Add event listener to search input
+      var searchInput = document.getElementById("searchInput");
+      searchInput.addEventListener("keyup", function() {
+        var filter = searchInput.value.toLowerCase();
+        var table = document.getElementById("sheet0");
+        var rows = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, hide those that don't match the search query
+        for (var i = 1; i < rows.length; i++) {
+          var cells = rows[i].getElementsByTagName("td");
+          var match = false;
+          for (var j = 0; j < cells.length; j++) {
+            var cell = cells[j];
+            if (cell.innerHTML.toLowerCase().indexOf(filter) > -1) {
+              match = true;
+              break;
+            }
+          }
+          if (match) {
+            rows[i].style.display = "";
+          } else {
+            rows[i].style.display = "none";
+          }
+        }
+      });
+    });
+
+    </script>
+  <!-- B code HTML -->
+  <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+    <col class="col0">
+    <col class="col1">
+    <col class="col2">
+    <tbody>
+      <tr class="row0">
+        <th class="column0 style0 s">COURSE CODE</th>
+        <th class="column1 style0 s">COURSE TITLE</th>
+        <th class="column2 style0 s">CATEGORY</th>
+      </tr>
+      <!-- Add more table rows here -->
+      <!-- Example row -->
+      <tr class="row1">
+        <td class="column0 style0 s">CB19141</td>
+        <td class="column1 style0 s">Fundamentals of Computer Science</td>
+        <td class="column2 style0 s">PC</td>
+      </tr>
+      <tr class="row2">
+        <td class="column0 style0 s">CD19141</td>
+        <td class="column1 style0 s">Design Drawing and Visualization</td>
+        <td class="column2">&nbsp;</td>
+      </tr>
+      <tr class="row3">
+        <td class="column0 style0 s">CY19141</td>
+        <td class="column1 style0 s">Chemistry for Technologists</td>
+        <td class="column2">&nbsp;</td>
+      </tr>
+      <tr class="row4">
+        <td class="column0 style0 s">CY19142</td>
+        <td class="column1 style0 s">Chemistry For Electronics Engineering </td>
+        <td class="column2">&nbsp;</td>
+      </tr>
+      <tr class="row5">
+        <td class="column0 style0 s">CY19143</td>
+        <td class="column1 style0 s">Applied Chemistry </td>
+        <td class="column2">&nbsp;</td>
+      </tr>
+      <tr class="row6">
+        <td class="column0 style0 s">EE19141</td>
+        <td class="column1 style0 s">Principles of Electrical Engineering</td>
+        <td class="column2 style0 s">ES</td>
+      </tr>
+      <tr class="row7">
+        <td class="column0 style0 s">GE19101</td>
+        <td class="column1 style0 s">Engineering Graphics</td>
+        <td class="column2">&nbsp;</td>
+      </tr>
+      <tr class="row8">
+        <td class="column0 style0 s">GE19121</td>
+        <td class="column1 style0 s">Engineering Practices - Civil &amp; Mechanical </td>
+        <td class="column2 style0 s">ES</td>
+      </tr>
+      <tr class="row9">
+        <td class="column0 style0 s">GE19122</td>
+        <td class="column1 style0 s">Engineering Practices- Electrical and Electronics</td>
+        <td class="column2 style0 s">ES</td>
+      </tr>
+      <tr class="row10">
+        <td class="column0 style0 s">GE19141</td>
+        <td class="column1 style0 s">Programming using C</td>
+        <td class="column2 style0 s">ES</td>
+      </tr>
+      <tr class="row11">
+        <td class="column0 style0 s">HS19151</td>
+        <td class="column1 style0 s">Technical English</td>
+        <td class="column2">&nbsp;</td>
+      </tr>
+      <tr class="row12">
+        <td class="column0 style0 s">HS19152</td>
+        <td class="column1 style0 s">Business Communication &amp; Value Science — 1</td>
+        <td class="column2 style0 s">HS</td>
+      </tr>
+      <tr class="row13">
+        <td class="column0 style0 s">MA 19156 </td>
+        <td class="column1 style0 s">Linear Algebra and Calculus</td>
+        <td class="column2 style0 s">BS</td>
+      </tr>
+      <tr class="row14">
+        <td class="column0 style0 s">MA19151</td>
+        <td class="column1 style0 s">Algebra And Calculus</td>
+        <td class="column2 style0 s">BS</td>
+      </tr>
+      <tr class="row15">
+        <td class="column0 style0 s">MA19152</td>
+        <td class="column1 style0 s">Linear Algebra and Applied Calculus</td>
+        <td class="column2 style0 s">BS</td>
+      </tr>
+      <tr class="row16">
+        <td class="column0 style0 s">MA19153</td>
+        <td class="column1 style0 s">Applied Calculus</td>
+        <td class="column2">&nbsp;</td>
+      </tr>
+      <tr class="row17">
+        <td class="column0 style0 s">MA19154 </td>
+        <td class="column1 style0 s">Discrete Mathematics</td>
+        <td class="column2 style0 s">BS</td>
+      </tr>
+      <tr class="row18">
+        <td class="column0 style0 s">MA19155</td>
+        <td class="column1 style0 s">Introductory topics in Statistics, Probability and Calculus</td>
+        <td class="column2 style0 s">BS</td>
+      </tr>
+      <tr class="row19">
+        <td class="column0 style0 s">MC19101</td>
+        <td class="column1 style0 s">Environmental Science and Engineering </td>
+        <td class="column2 style0 s">HS</td>
+      </tr>
+      <tr class="row20">
+        <td class="column0 style0 s">MC19102</td>
+        <td class="column1 style0 s">Indian Constitution and Freedom Movement</td>
+        <td class="column2 style0 s">MC</td>
+      </tr>
+      <tr class="row21">
+        <td class="column0 style0 s">PH19141</td>
+        <td class="column1 style0 s">Physics Of Materials</td>
+        <td class="column2 style0 s">BS</td>
+      </tr>
+      <tr class="row22">
+        <td class="column0 style0 s">PH19142</td>
+        <td class="column1 style0 s">Physics for Bioscience</td>
+        <td class="column2">&nbsp;</td>
+      </tr>
+      <tr class="row23">
+        <td class="column0 style0 s">PH19143</td>
+        <td class="column1 style0 s">Fundamentals of Physics</td>
+        <td class="column2 style0 s">BS</td>
+      </tr>
+      <tr class="row24">
+        <td class="column0 style0 s">PH19151</td>
+        <td class="column1 style0 s">Physics for Chemical Engineering</td>
+        <td class="column2">&nbsp;</td>
+      </tr>
+      <tr class="row25">
+        <td class="column0 style0 s">PH19241</td>
+        <td class="column1 style0 s">Physics for Information Science</td>
+        <td class="column2 style0 s">BS</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- A code JavaScript -->
+  </body>
+
+</html>
